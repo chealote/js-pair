@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pair</title>
+    <style>
+      body {
+          font-family: monospace;
+          font-weight: normal;
+          font-size: 20px;
+          background: #ffe;
+      }
+      .person {
+          padding: 20px;
+          margin-right: 10px;
+          background: black;
+          color: white;
+          display: inline-block;
+          border-radius: 20px;
+      }
+      .group {
+          margin: 10px;
+          border-radius: 20px;
+          padding: 10px;
+      }
+      .group p {
+          font-weight: bold;
+          display: inline-block;
+      }
+      .holder {
+          background: lightgray;
+          border: 5px solid gray;
+      }
+      .active {
+          background: lightgreen;
+          border: 5px solid green;
+      }
+      @keyframes highlight {
+          0% {
+              background: red;
+          }
+          100% {
+              background: none;
+          }
+      }
+      .locked {
+          background: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="peopleInput">Comma-space separated people:</label>
+    <input type="text" id="peopleInput" onkeyup="checkPeople(event)"/>
+    <label for="groupsInput">Comma-space separated groups:</label>
+    <input type="text" id="groupsInput" onkeyup="checkGroups(event)"/>
+    <a href="#" onclick="randomize()">randomize</a>
+    <div id="status"></div>
+    <div
+      id="groups"
+      ondragover="onDragOverHandler(event)"
+      ondrop="onDropHandler(event)"
+      >
+    </div>
+
+  </body>
+  <!-- <script src="script.js"></script> -->
+  <script src="new.js"></script>
+</html>
