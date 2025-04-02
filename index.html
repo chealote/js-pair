@@ -7,7 +7,7 @@
     <title>Pair</title>
     <style>
       body {
-          font-family: monospace;
+          font-family: Iosevka Term,monospace;
           font-weight: normal;
           font-size: 20px;
           background: #ffe;
@@ -48,6 +48,12 @@
       .locked {
           background: blue;
       }
+      .badInput {
+          border: 2px solid red;
+      }
+      .alert {
+          border: 2px solid blue;
+      }
     </style>
   </head>
   <body>
@@ -55,7 +61,11 @@
     <input type="text" id="peopleInput" onkeyup="checkPeople(event)"/>
     <label for="groupsInput">Comma-space separated groups:</label>
     <input type="text" id="groupsInput" onkeyup="checkGroups(event)"/>
-    <a href="#" onclick="randomize()">randomize</a>
+    <br/>
+    <label for="maxAmountOfPeopleInput">Max amount of people per group:</label>
+    <input type="number" id="maxAmountOfPeopleInput" onkeyup="checkMaxAmountOfPeople(event)" />
+    <br/>
+    <a href="#" onclick="randomize()">Click to randomize</a>
     <div id="status"></div>
     <div
       id="groups"
